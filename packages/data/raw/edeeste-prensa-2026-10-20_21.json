@@ -1,0 +1,34 @@
+{
+  "_note": "Hechos extraídos de notas de prensa que citan avisos de Edeeste (no se copia el texto de las notas). Cuando el medio no da la hora exacta de un circuito, el script asigna una de las horas de cierre publicadas y lo marca en 'note'.",
+  "sources": {
+    "dl-20": {
+      "label": "Diario Libre · Interrupciones de Edeeste (20 oct 2026)",
+      "url": "https://www.diariolibre.com/economia/energia/2026/10/20/interrupciones-de-servicio-electrico-por-edeeste-en-santo-domingo/3694653",
+      "date": "2026-10-20"
+    },
+    "at-21": {
+      "label": "Atardecer · Sectores sin luz el miércoles 21 de octubre",
+      "url": "https://atardecer.com.do/estos-sectores-se-quedaran-sin-luz-este-miercoles-21-de-octubre/",
+      "date": "2026-10-20"
+    }
+  },
+  "items": [
+    { "source": "dl-20", "date": "2026-10-20", "start": "09:20", "endOptions": ["16:20", "17:20", "18:20"], "cause": "Trabajos de inversión, mantenimiento y medición", "circuits": ["CAPO07", "TIM202", "TIM201", "LM3808", "LM3802", "HAMO01", "KM2404", "VDU801", "BRUJ01", "CANU06"] },
+    { "source": "at-21", "date": "2026-10-21", "start": "07:20", "end": "15:20", "cause": "Mantenimiento de redes", "circuits": ["DESP03", "DESP09"] },
+    { "source": "at-21", "date": "2026-10-21", "start": "09:20", "end": "18:20", "cause": "Proyectos de inversión", "circuits": ["CAPO05", "CAPO06", "LM3805"] },
+    { "source": "at-21", "date": "2026-10-21", "start": "09:20", "endOptions": ["16:20", "17:20"], "cause": "Desarrollo de obras", "circuits": ["CAPO09", "CAPO10", "CAPO11", "KM2405", "HAMO03", "HAMO06", "LM6901"] }
+  ],
+  "locations": {
+    "_note": "Ubicación inferida por el prefijo del código y el nombre del circuito (p. ej. CAPO = Capotillo, LM = Los Mina). Aproximada.",
+    "CAPO": ["distrito-nacional", "Santo Domingo de Guzmán", "Capotillo"],
+    "TIM2": ["distrito-nacional", "Santo Domingo de Guzmán", "Timbeque"],
+    "DESP": ["distrito-nacional", "Santo Domingo de Guzmán", "Despradel"],
+    "LM38": ["santo-domingo", "Santo Domingo Este", "Los Mina 138"],
+    "LM69": ["santo-domingo", "Santo Domingo Este", "Los Mina 69"],
+    "HAMO": ["santo-domingo", "Santo Domingo Este", "Hainamosa"],
+    "VDU8": ["santo-domingo", "Santo Domingo Este", "Villa Duarte"],
+    "KM24": ["santo-domingo", "Boca Chica", "Km 24"],
+    "BRUJ": ["santo-domingo", "Boca Chica", "Brujuelas"],
+    "CANU": ["santo-domingo", "Guerra", "Canu"]
+  }
+}

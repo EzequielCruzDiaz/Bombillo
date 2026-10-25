@@ -1,0 +1,23 @@
+{
+  "name": "@bombillo/data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fuentes crudas (Excel, PDF, HTML transcrito) y script que genera la semilla validada.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./dataset.json": "./generated/dataset.json",
+    "./provinces.geojson": "./generated/provinces.geojson.json"
+  },
+  "scripts": {
+    "build": "tsx scripts/build-seed.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bombillo/domain": "workspace:*"
+  },
+  "devDependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

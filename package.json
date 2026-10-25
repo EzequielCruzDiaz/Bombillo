@@ -1,0 +1,42 @@
+{
+  "name": "bombillo",
+  "private": true,
+  "description": "Bombillo: mapa colaborativo del estado de la energía eléctrica en República Dominicana (demo con escenarios simulados).",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "data:build": "pnpm --filter @bombillo/data build",
+    "dev:api": "pnpm --filter @bombillo/api dev",
+    "dev:web": "pnpm --filter @bombillo/web dev",
+    "dev:presentation": "pnpm --filter @bombillo/presentation dev",
+    "build": "pnpm -r build",
+    "typecheck": "tsc -p tsconfig.scripts.json && pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm lint && pnpm typecheck && pnpm test",
+    "prepare": "husky",
+    "roadmap:docs": "tsx scripts/github/bootstrap.ts --docs-only",
+    "github:bootstrap": "tsx scripts/github/bootstrap.ts"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8",
+    "zod": "^3.25.76"
+  }
+}

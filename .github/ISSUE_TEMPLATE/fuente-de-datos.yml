@@ -1,0 +1,26 @@
+name: Fuente de datos
+description: Agregar o corregir una fuente (EDE, prensa, archivo oficial)
+labels: ["area:ingesta"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: URL o archivo
+    validations:
+      required: true
+  - type: dropdown
+    id: procedencia
+    attributes:
+      label: Procedencia
+      options: ["official", "press", "simulated"]
+    validations:
+      required: true
+  - type: textarea
+    id: formato
+    attributes:
+      label: Formato y campos
+      description: HTML, Excel, PDF… ¿Trae código de circuito? ¿Horas? ¿Clientes?
+  - type: input
+    id: licencia
+    attributes:
+      label: Licencia o términos de uso

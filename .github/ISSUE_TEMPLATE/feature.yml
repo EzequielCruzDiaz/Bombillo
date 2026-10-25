@@ -1,0 +1,22 @@
+name: Funcionalidad
+description: Proponer algo nuevo
+labels: ["tipo:feature"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema que resuelve
+      description: Para quién y por qué importa.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      placeholder: "- [ ] …"
+    validations:
+      required: true

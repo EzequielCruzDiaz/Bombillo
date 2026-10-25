@@ -1,0 +1,17 @@
+{
+  "name": "@bombillo/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Modelo de dominio (esquemas Zod) y motor determinista de simulación de escenarios.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}

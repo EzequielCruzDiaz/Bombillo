@@ -1,0 +1,107 @@
+[
+  {
+    "id": "semana-mantenimientos-oct-2026",
+    "kind": "maintenance-week",
+    "title": "Semana de mantenimientos",
+    "summary": "Los cortes programados reales de Edenorte, Edesur y Edeeste del 19 al 23 de octubre de 2026, con averías y reportes ciudadanos simulados.",
+    "start": "2026-10-19T06:00:00-04:00",
+    "end": "2026-10-23T21:00:00-04:00",
+    "stepMinutes": 20,
+    "seed": 1019,
+    "facts": [
+      {
+        "text": "Edenorte publicó 121 interrupciones programadas en 79 circuitos para el 19–23 de octubre de 2026.",
+        "source": { "label": "Edenorte · Mantenimientos programados del 19 al 23 de octubre 2026", "url": "https://edenorte.com.do/mantenimientos-programados-del-19-al-23-de-octubre-2026/" }
+      },
+      {
+        "text": "Edesur publica su programa semanal por provincia, franja horaria y sectores, sin código de circuito.",
+        "source": { "label": "Edesur · Mantenimientos Programados", "url": "https://www.edesur.com.do/enlaces-empresa/mantenimientos-programados/" }
+      },
+      {
+        "text": "Edeeste comunica sus cortes por avisos diarios que recogen los medios.",
+        "source": { "label": "Diario Libre, 20 oct 2026", "url": "https://www.diariolibre.com/economia/energia/2026/10/20/interrupciones-de-servicio-electrico-por-edeeste-en-santo-domingo/3694653" }
+      }
+    ],
+    "simulatedParts": [
+      "Averías no programadas (4 a 7 por día).",
+      "Trabajos que se extienden más de lo anunciado.",
+      "Reportes ciudadanos y su consenso.",
+      "Circuitos de Edesur: códigos SIM-… creados por provincia y zona."
+    ]
+  },
+  {
+    "id": "deficit-generacion",
+    "kind": "generation-deficit",
+    "title": "Noche de déficit",
+    "summary": "Varias plantas fuera de servicio obligan a rotar circuitos en bloques de 2 horas. Las horas de corte dependen de la clase del circuito.",
+    "start": "2026-10-22T06:00:00-04:00",
+    "end": "2026-10-23T06:00:00-04:00",
+    "stepMinutes": 20,
+    "seed": 2210,
+    "facts": [
+      {
+        "text": "Horas diarias de corte por clase de circuito: A 0.6 h, B 5 h, C 7.3 h y D 9.1 h.",
+        "source": { "label": "El Día · El 54 % de clientes de las EDE recibe 7.3 horas de apagones por día", "url": "https://eldia.com.do/el-54-clientes-edes-recibe-7-3-horas-apagones-por-dia/" }
+      },
+      {
+        "text": "Edeeste publicaba la rotación en bloques de 2 horas que empiezan a las y 20 (8:20, 10:20…).",
+        "source": { "label": "Edeeste · Control de Abastecimiento", "url": "https://edeeste.com.do/index.php/control-de-abastecimiento/", "date": "2025-02-11" }
+      }
+    ],
+    "simulatedParts": [
+      "La fecha y la magnitud del déficit.",
+      "La clase (A, B, C, D) de cada circuito.",
+      "Qué bloques le tocan a cada circuito."
+    ]
+  },
+  {
+    "id": "apagon-general-11-nov-2025",
+    "kind": "general-blackout",
+    "title": "Apagón general",
+    "summary": "Reconstrucción del apagón del 11 de noviembre de 2025: todo el país sin luz desde la 1:20 p.m. y recuperación por circuitos.",
+    "start": "2025-11-11T13:00:00-04:00",
+    "end": "2025-11-12T04:00:00-04:00",
+    "stepMinutes": 15,
+    "seed": 1111,
+    "facts": [
+      {
+        "text": "El fallo ocurrió sobre las 13:20 por la salida simultánea de las unidades de CESPM y la Central Quisqueya.",
+        "source": { "label": "El Diario (Ecuador) · República Dominicana sufre un apagón nacional", "url": "https://www.eldiario.ec/lamarea/estan-en-crisis-energetica-republica-dominicana-sufre-un-apagon-nacional-20251111/" }
+      },
+      {
+        "text": "Las distribuidoras restablecieron el servicio a nivel nacional en menos de 14 horas.",
+        "source": { "label": "El Caribe · El apagón general número 89 en 37 años", "url": "https://www.elcaribe.com.do/panorama/dinero/blackout-el-apagon-general-numero-89-en-37-anos-en-este-pais/" }
+      }
+    ],
+    "simulatedParts": [
+      "La hora en que vuelve cada circuito.",
+      "El orden de recuperación por región.",
+      "Los reportes ciudadanos."
+    ]
+  },
+  {
+    "id": "tormenta-tropical",
+    "kind": "storm",
+    "title": "Tormenta tropical",
+    "summary": "Una tormenta entra por el este y cruza la costa sur. Inspirada en los daños reportados tras el paso de Ernesto en agosto de 2024.",
+    "start": "2024-08-14T06:00:00-04:00",
+    "end": "2024-08-16T06:00:00-04:00",
+    "stepMinutes": 30,
+    "seed": 1408,
+    "facts": [
+      {
+        "text": "Edeeste restableció 22 circuitos que salieron por el fenómeno, con 84,207 usuarios afectados (10.23 %). Santo Domingo y La Altagracia fueron las más afectadas.",
+        "source": { "label": "Presidencia · Las EDE informan operativo tras el huracán Ernesto", "url": "https://presidencia.gob.do/noticias/edesur-dominicana-edenorte-y-edeeste-informan-intenso-operativo-para-solucionar-salida-de" }
+      },
+      {
+        "text": "Edesur reportó interrupciones en el Distrito Nacional, Azua, San Cristóbal, Barahona, Baní, Pedernales y Neiba. Edenorte no registró incidencias significativas.",
+        "source": { "label": "Presidencia · Las EDE informan operativo tras el huracán Ernesto", "url": "https://presidencia.gob.do/noticias/edesur-dominicana-edenorte-y-edeeste-informan-intenso-operativo-para-solucionar-salida-de" }
+      }
+    ],
+    "simulatedParts": [
+      "La trayectoria y la hora de llegada por provincia.",
+      "Qué circuitos fallan y cuánto tardan en volver.",
+      "Fecha aproximada."
+    ]
+  }
+]

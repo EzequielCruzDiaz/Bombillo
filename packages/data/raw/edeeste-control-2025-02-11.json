@@ -1,0 +1,395 @@
+{
+ "source": {
+  "label": "Edeeste · Control de Abastecimiento (11 feb 2025, 4:20–6:20 p.m.)",
+  "url": "https://edeeste.com.do/index.php/control-de-abastecimiento/",
+  "date": "2025-02-11"
+ },
+ "_note": "Extraído del PDF con scripts/python/extract_edeeste_pdf_reference.py (pdfplumber, por posición de palabras). Provincia y municipio asignados a mano según el nombre del circuito y sus zonas.",
+ "items": [
+  {
+   "code": "BENE01",
+   "name": "Benedicto",
+   "province": "santo-domingo",
+   "municipality": "Boca Chica",
+   "zones": [
+    "Poblado batey benedicto",
+    "Gato",
+    "Jose Francisco Peña Gomez"
+   ]
+  },
+  {
+   "code": "BOCA02",
+   "name": "Boca Chica, No 2",
+   "province": "santo-domingo",
+   "municipality": "Boca Chica",
+   "zones": [
+    "Maternidad de Boca Chica",
+    "Antonio Guzman",
+    "Boca Chica (Parcial)",
+    "Los Tanquesitos (Parcial)",
+    "Monte Adentro de Andres",
+    "Andres",
+    "Batey Andres"
+   ]
+  },
+  {
+   "code": "EBRI03",
+   "name": "El Brisal, No 3",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Prado Oriental",
+    "Residencial Altagracia",
+    "Brisas Oriental",
+    "Josue",
+    "Delta Amarilis",
+    "Avepo",
+    "Nuevo Amancer",
+    "Don Paco",
+    "Los Maestros",
+    "Residencial Tecnico de Ecucacion",
+    "Urbanizacion Villa San Isidro",
+    "San Isidro",
+    "Brisa Oriental VIII",
+    "Amalia",
+    "Fernadez Oriental",
+    "Kolosin",
+    "Pradera Oriental",
+    "Alpes IV",
+    "Urbanizacion Profesionales Agropecuarios",
+    "El Hipódromo V Centenario",
+    "el control de la ONSA"
+   ]
+  },
+  {
+   "code": "HAMO02",
+   "name": "Hainamosa, No 2",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Invi-Cea",
+    "Ciudad del Almirante",
+    "Los Pinos",
+    "Urbanizacion Buena Ventura",
+    "Ramon Matias Mella",
+    "La Corporanea",
+    "Batey Monserrat",
+    "El Bonito",
+    "La Grua",
+    "Los Solares",
+    "Almirante adentro",
+    "Avenida La Pista",
+    "Perla Antillana",
+    "Las Enfermera",
+    "Prados de San Luis",
+    "San Luis",
+    "Cristo Salvado",
+    "Nuevo Paraiso",
+    "Villa Liberacion"
+   ]
+  },
+  {
+   "code": "HAMO04",
+   "name": "Hainamosa, No 4",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "El Perla",
+    "El Tamarindo",
+    "San Luis",
+    "La Colonial",
+    "Villa Liberación (parcial)",
+    "Enfermera (parcial)",
+    "Almirante (parcial)",
+    "Almirante IV (parcial)"
+   ]
+  },
+  {
+   "code": "HAMY02",
+   "name": "Hato Mayor, No 2",
+   "province": "hato-mayor",
+   "municipality": "Hato Mayor del Rey",
+   "zones": [
+    "Carretera Hato Mayor - Seibo",
+    "Los Hatillos",
+    "Hato Mayo San Pedro",
+    "Carretera Vicentillo",
+    "Vicentillo",
+    "Guayquia",
+    "Hacia Candelaria",
+    "Oasis",
+    "Pedro Sanchez",
+    "Cercadito",
+    "El Saman",
+    "La Espinas",
+    "Las Palmillas",
+    "Los Coquitos",
+    "Paso Caribe",
+    "Paso Cibao",
+    "Proyecto Genao",
+    "Rancho Chiquito"
+   ]
+  },
+  {
+   "code": "HI3804",
+   "name": "Higuey 138, No 4",
+   "province": "la-altagracia",
+   "municipality": "Higüey",
+   "zones": [
+    "Otra Banda",
+    "Carretera Macao",
+    "Cruz del Isleño",
+    "Nisibon"
+   ]
+  },
+  {
+   "code": "HI3806",
+   "name": "Higuey 138, No 6",
+   "province": "la-altagracia",
+   "municipality": "Higüey",
+   "zones": [
+    "Higuey (Parcial)"
+   ]
+  },
+  {
+   "code": "HI6905",
+   "name": "Higuey 69, No 5",
+   "province": "la-altagracia",
+   "municipality": "Higüey",
+   "zones": [
+    "AVIACION"
+   ]
+  },
+  {
+   "code": "INVI01",
+   "name": "Invivienda, No 1",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Eugenio Maria de Hosto",
+    "Villa Esperanza (parcial)",
+    "Trabajadores Invivienda (parcial)",
+    "Villa Carmen",
+    "Respaldo Villa Carmen",
+    "Respaldo Charles",
+    "Solares del Almirante (Parcial)",
+    "Nanci Nadecha (Parcial)"
+   ]
+  },
+  {
+   "code": "KM2405",
+   "name": "Km 24, No 5",
+   "province": "santo-domingo",
+   "municipality": "Boca Chica",
+   "zones": [
+    "El Toro",
+    "Zonas Aledañas"
+   ]
+  },
+  {
+   "code": "LM6901",
+   "name": "Los Mina 69, No 1",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Barrio San Antonio de Los Minas",
+    "Katanga",
+    "Vietnam",
+    "San Pablo II"
+   ]
+  },
+  {
+   "code": "MICH01",
+   "name": "Miches, No 1",
+   "province": "el-seibo",
+   "municipality": "Miches",
+   "zones": [
+    "Carretera Miches - Sabana de la Mar"
+   ]
+  },
+  {
+   "code": "QUIS01",
+   "name": "Quisqueya",
+   "province": "san-pedro-de-macoris",
+   "municipality": "Quisqueya",
+   "zones": [
+    "Invi",
+    "Invi II",
+    "Guachupita",
+    "Hugamba",
+    "Establo",
+    "Higuereta",
+    "Punta Brava",
+    "La Loma",
+    "La Plaza",
+    "Pueblo Nuevo",
+    "San Carlos",
+    "Las Monjas",
+    "Placer Bonito",
+    "Villa Verde",
+    "Centro del Pueblo",
+    "Los Chifles"
+   ]
+  },
+  {
+   "code": "RCL155",
+   "name": "Recloser 30 De Mayo",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Las flores",
+    "el kilombo",
+    "la casona",
+    "villa de san luis",
+    "la rusa",
+    "casa nueva (parcial)",
+    "la emplanada"
+   ]
+  },
+  {
+   "code": "RCL041",
+   "name": "Recloser Cacique",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Sector el Cacique"
+   ]
+  },
+  {
+   "code": "RCL152",
+   "name": "Recloser Colonia De San Luis",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Carr. Mella entre c/7ma",
+    "c/9",
+    "Acasia Oriental",
+    "San Luis",
+    "Santo Domingo Este"
+   ]
+  },
+  {
+   "code": "RCL125",
+   "name": "Recloser El Rubio",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Sector El Rubio (Hainamosa)"
+   ]
+  },
+  {
+   "code": "RCL085",
+   "name": "Recloser La Barquita",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Norte",
+   "zones": [
+    "La Barquita (Sabana Perdida)"
+   ]
+  },
+  {
+   "code": "RCL157",
+   "name": "Recloser La Casita.",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "LAS CASITAS"
+   ]
+  },
+  {
+   "code": "RCL107",
+   "name": "Recloser Los Laureles",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Los Laureles.Residencial Antonia",
+    "Barrio Paraoso",
+    "La loma de los Chivos",
+    "Barrio Villa Lemua",
+    "Altos de Los Ceros",
+    "El Cristal",
+    "Claribel",
+    "Momterey",
+    "Evaristo Figueroa",
+    "Nuevo Orizontes",
+    "La Orizontes",
+    "Residencial Juan Pablo",
+    "La Javilla",
+    "Cruz Grande",
+    "Brisas de Ozama",
+    "Villa Lorenzo",
+    "Villa Laura",
+    "Villa Hermosa",
+    "La Antena",
+    "Campechito II"
+   ]
+  },
+  {
+   "code": "RCL049",
+   "name": "Recloser Los Tanquecitos",
+   "province": "santo-domingo",
+   "municipality": "Boca Chica",
+   "zones": [
+    "Los Tanquecitos de Boca Chica"
+   ]
+  },
+  {
+   "code": "RCL015",
+   "name": "Recloser Matua",
+   "province": "san-pedro-de-macoris",
+   "municipality": "Juan Dolio",
+   "zones": [
+    "Punta de Garza",
+    "Villa Orilla",
+    "El Brisas"
+   ]
+  },
+  {
+   "code": "RCL016",
+   "name": "Recloser Mendoza",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Resp. Villa Carmen (parcial)",
+    "Bro. La Toronja",
+    "Brisas del Eden",
+    "Invienda (parcial)",
+    "Buenaventura de Mendoza"
+   ]
+  },
+  {
+   "code": "RCL126",
+   "name": "Recloser Nuevo Paraiso",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Este",
+   "zones": [
+    "Sector Nuevo Paraiso (Hainamosa)"
+   ]
+  },
+  {
+   "code": "RCL018",
+   "name": "Recloser Punta Villa Mella",
+   "province": "santo-domingo",
+   "municipality": "Santo Domingo Norte",
+   "zones": [
+    "Urb. Carlos Alvarez",
+    "Urb. Vista Bella (Parcial)",
+    "Villa Nueva (Parcial)",
+    "Villa Satelite (Parcial)",
+    "Ens. Paraíso II",
+    "Bro. Los Arkeanos",
+    "Jardines del Remanso",
+    "Mata de los Indio",
+    "Villa Jerusalén",
+    "El Almendro",
+    "Punta de Villa Mella",
+    "San Felipe",
+    "Licey (Parcial)",
+    "Los Morenos (Parcial)",
+    "Paraiso Escondido",
+    "Maricao",
+    "El Higuero",
+    "Carretera V. Mella- Yamasa (parcial)"
+   ]
+  }
+ ]
+}

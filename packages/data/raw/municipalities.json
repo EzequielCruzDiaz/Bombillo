@@ -1,0 +1,61 @@
+{
+  "_note": "Coordenadas aproximadas (centro urbano) en [lng, lat], escritas a mano para la demo. El script de semilla verifica que cada punto caiga dentro de su provincia; si no, usa el punto interior de la provincia. Para producción: cartografía oficial de la ONE.",
+  "dajabon": { "Dajabón": [-71.708, 19.548], "Loma de Cabrera": [-71.611, 19.433] },
+  "duarte": { "San Francisco de Macorís": [-70.252, 19.3], "Villa Tapia": [-70.42, 19.3] },
+  "espaillat": { "Moca": [-70.523, 19.394] },
+  "hermanas-mirabal": { "Salcedo": [-70.418, 19.378], "Tenares": [-70.35, 19.375] },
+  "la-vega": {
+    "Concepción de La Vega": [-70.529, 19.222],
+    "Constanza": [-70.746, 18.909],
+    "Jarabacoa": [-70.637, 19.118],
+    "Jima Abajo": [-70.38, 19.13],
+    "Rio Verde Arriba (D.M.)": [-70.6, 19.28]
+  },
+  "maria-trinidad-sanchez": { "Nagua": [-69.847, 19.376], "Rio San Juan": [-70.077, 19.641] },
+  "monsenor-nouel": {
+    "Bonao": [-70.409, 18.937],
+    "Maimón": [-70.3, 18.906],
+    "Villa Sonador (D.M.)": [-70.48, 18.86]
+  },
+  "monte-cristi": { "Guayubín": [-71.336, 19.617], "Monte Cristi": [-71.65, 19.85] },
+  "puerto-plata": { "Luperón": [-70.962, 19.892], "San Felipe de Puerto Plata": [-70.688, 19.793] },
+  "samana": { "Las Terrenas": [-69.542, 19.311], "Santa Barbara de Samaná": [-69.336, 19.205] },
+  "santiago": {
+    "Distrito Municipal Pedro García": [-70.65, 19.53],
+    "Jánico": [-70.795, 19.322],
+    "Navarrete": [-70.875, 19.56],
+    "San José de las Matas": [-70.937, 19.338],
+    "Santiago de los Caballeros": [-70.697, 19.451],
+    "Tamboril": [-70.611, 19.486],
+    "Villa Gonzalez": [-70.788, 19.54]
+  },
+  "santiago-rodriguez": { "Sabaneta": [-71.344, 19.476] },
+  "sanchez-ramirez": { "Cotuí": [-70.15, 19.054] },
+  "valverde": { "Laguna Salada": [-71.09, 19.65], "Mao": [-71.078, 19.552] },
+  "santo-domingo": {
+    "Santo Domingo Este": [-69.857, 18.488],
+    "Santo Domingo Norte": [-69.9, 18.55],
+    "Santo Domingo Oeste": [-69.98, 18.5],
+    "Boca Chica": [-69.606, 18.453],
+    "Los Alcarrizos": [-70.017, 18.517],
+    "Pedro Brand": [-70.09, 18.567],
+    "Guerra": [-69.703, 18.553]
+  },
+  "distrito-nacional": { "Santo Domingo de Guzmán": [-69.92, 18.476] },
+  "hato-mayor": { "Hato Mayor del Rey": [-69.256, 18.763] },
+  "la-altagracia": { "Higüey": [-68.708, 18.615], "Punta Cana": [-68.4, 18.58] },
+  "el-seibo": { "Miches": [-69.045, 18.982], "Santa Cruz de El Seibo": [-69.039, 18.765] },
+  "san-pedro-de-macoris": { "Quisqueya": [-69.405, 18.555], "San Pedro de Macorís": [-69.306, 18.457], "Juan Dolio": [-69.43, 18.43] },
+  "la-romana": { "La Romana": [-68.973, 18.427], "Villa Hermosa": [-68.99, 18.46] },
+  "monte-plata": { "Monte Plata": [-69.784, 18.807], "Bayaguana": [-69.636, 18.75] },
+  "azua": { "Azua": [-70.735, 18.453], "Padre Las Casas": [-70.94, 18.733] },
+  "barahona": { "Barahona": [-71.1, 18.208] },
+  "independencia": { "Duvergé": [-71.522, 18.367], "Jimaní": [-71.851, 18.492] },
+  "baoruco": { "Villa Jaragua": [-71.493, 18.49], "Tamayo": [-71.2, 18.393], "Neiba": [-71.418, 18.481] },
+  "pedernales": { "Pedernales": [-71.744, 18.038] },
+  "peravia": { "Baní": [-70.331, 18.28], "Nizao": [-70.21, 18.25] },
+  "san-cristobal": { "San Cristóbal": [-70.11, 18.416], "Cambita Garabitos": [-70.2, 18.45] },
+  "san-juan": { "San Juan de la Maguana": [-71.23, 18.806], "Juan Santiago": [-71.33, 19.0] },
+  "san-jose-de-ocoa": { "San José de Ocoa": [-70.506, 18.546] },
+  "elias-pina": { "Comendador": [-71.699, 18.876] }
+}

@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+**/generated/**
+**/raw/**
+**/dist/**
+**/.next/**
+docs/roadmap.md

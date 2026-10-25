@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommits", ":timezone(America/Santo_Domingo)"],
+  "schedule": ["before 9am on monday"],
+  "rangeStrategy": "bump",
+  "commitMessagePrefix": "chore(deps):",
+  "packageRules": [
+    {
+      "groupName": "react",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"]
+    },
+    { "groupName": "d3", "matchPackageNames": ["d3-*", "@types/d3-*"] },
+    {
+      "groupName": "lint y formato",
+      "matchPackageNames": ["eslint", "@eslint/*", "typescript-eslint", "prettier"]
+    },
+    { "groupName": "fastify", "matchPackageNames": ["fastify", "@fastify/*"] },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    }
+  ]
+}

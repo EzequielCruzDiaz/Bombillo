@@ -1,0 +1,27 @@
+{
+  "name": "@bombillo/presentation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Build de presentaci\u00f3n: un \u00fanico HTML que funciona sin servidor ni conexi\u00f3n (para el celular y para inversionistas).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@bombillo/data": "workspace:*",
+    "@bombillo/domain": "workspace:*",
+    "@bombillo/ui": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.6",
+    "vite-plugin-singlefile": "^2.1.0"
+  }
+}

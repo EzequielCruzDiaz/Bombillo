@@ -1,0 +1,39 @@
+# Entorno local completo. La demo NO lo necesita (corre en memoria).
+#   docker compose up -d db redis
+#   DATABASE_URL=postgres://bombillo:bombillo@localhost:5432/bombillo pnpm --filter @bombillo/api db:migrate
+#   DATA_SOURCE=postgres DATABASE_URL=... pnpm dev:api
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: bombillo
+      POSTGRES_PASSWORD: bombillo
+      POSTGRES_DB: bombillo
+    ports: ["5432:5432"]
+    volumes: [db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bombillo"]
+      interval: 5s
+      retries: 10
+
+  # Reservado para la capa de tiempo real y colas (BullMQ, pub/sub).
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      NODE_ENV: production
+      DATA_SOURCE: postgres
+      DATABASE_URL: postgres://bombillo:bombillo@db:5432/bombillo
+      CORS_ORIGIN: http://localhost:3000
+    ports: ["4000:4000"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:

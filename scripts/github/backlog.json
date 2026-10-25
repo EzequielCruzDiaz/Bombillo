@@ -1,0 +1,371 @@
+{
+  "labels": [
+    { "name": "tipo:feature", "color": "1f6feb", "description": "Funcionalidad nueva" },
+    { "name": "tipo:chore", "color": "8b949e", "description": "Mantenimiento, configuración" },
+    { "name": "tipo:bug", "color": "d73a4a", "description": "Algo no funciona" },
+    { "name": "tipo:docs", "color": "0e8a16", "description": "Documentación" },
+    { "name": "tipo:research", "color": "a371f7", "description": "Investigación o validación" },
+    { "name": "area:ingesta", "color": "f4c35a", "description": "Adaptadores y jobs de fuentes" },
+    { "name": "area:datos", "color": "f4c35a", "description": "Semilla, geografía, normalización" },
+    { "name": "area:dominio", "color": "f4c35a", "description": "Esquemas y motor" },
+    {
+      "name": "area:api",
+      "color": "5aa7e8",
+      "description": "Fastify, repositorios, base de datos"
+    },
+    { "name": "area:web", "color": "5aa7e8", "description": "Next.js" },
+    { "name": "area:movil", "color": "5aa7e8", "description": "App Expo" },
+    { "name": "area:ui", "color": "5aa7e8", "description": "Componentes compartidos" },
+    { "name": "area:infra", "color": "8fd16a", "description": "CI, despliegue, observabilidad" },
+    { "name": "area:seguridad", "color": "8fd16a", "description": "Privacidad, anti-abuso, auth" },
+    {
+      "name": "area:negocio",
+      "color": "ef5350",
+      "description": "Modelo de negocio, ventas, pitch"
+    },
+    { "name": "prioridad:alta", "color": "b60205", "description": "" },
+    { "name": "prioridad:media", "color": "fbca04", "description": "" },
+    { "name": "prioridad:baja", "color": "c2e0c6", "description": "" }
+  ],
+  "milestones": [
+    {
+      "key": "M0",
+      "title": "M0 · Fundaciones",
+      "description": "Repo, CI, calidad automática y demo publicada."
+    },
+    {
+      "key": "M1",
+      "title": "M1 · Ingesta automática",
+      "description": "Las tres EDE entran solas a la base de datos, con crudo guardado e idempotencia."
+    },
+    {
+      "key": "M2",
+      "title": "M2 · Geografía limpia",
+      "description": "Límites con licencia válida, sectores y resolución de nombres de zonas."
+    },
+    {
+      "key": "M3",
+      "title": "M3 · Reportes y consenso",
+      "description": "Reportes ciudadanos reales, celdas H3, reputación y máquina de estados."
+    },
+    {
+      "key": "M4",
+      "title": "M4 · Tiempo real y alertas",
+      "description": "SSE, suscripciones por sector y notificaciones push."
+    },
+    {
+      "key": "M5",
+      "title": "M5 · App móvil",
+      "description": "App Expo con mapa, reportar y alertas."
+    },
+    {
+      "key": "M6",
+      "title": "M6 · Web producto",
+      "description": "MapLibre + PMTiles, páginas por provincia, PWA."
+    },
+    {
+      "key": "M7",
+      "title": "M7 · Empresas e instituciones",
+      "description": "Panel B2B multisede, panel B2G y API con llaves."
+    },
+    {
+      "key": "M8",
+      "title": "M8 · Operación",
+      "description": "Despliegue, observabilidad, respaldo y seguridad."
+    },
+    {
+      "key": "MV",
+      "title": "MV · Validación de negocio",
+      "description": "Entrevistas, piloto y métricas para la ronda."
+    }
+  ],
+  "issues": [
+    {
+      "key": "M0-01",
+      "milestone": "M0",
+      "title": "Crear repositorio en GitHub y proteger la rama main",
+      "labels": ["tipo:chore", "area:infra", "prioridad:alta"],
+      "body": "Subir el monorepo, activar protección de `main`: PR obligatorio, CI en verde, historial lineal.\n\n**Criterios**\n- [ ] Repo privado creado\n- [ ] `main` protegida con el check `CI / check`\n- [ ] Secretos de CI vacíos documentados en `.env.example`"
+    },
+    {
+      "key": "M0-02",
+      "milestone": "M0",
+      "title": "Activar Renovate y revisar el primer lote de actualizaciones",
+      "labels": ["tipo:chore", "area:infra", "prioridad:media"],
+      "body": "Instalar la app de Renovate en el repo; la configuración ya está en `renovate.json`.\n\n**Criterios**\n- [ ] PR de bienvenida de Renovate fusionado\n- [ ] Actualizaciones agrupadas por ecosistema"
+    },
+    {
+      "key": "M0-03",
+      "milestone": "M0",
+      "title": "Tests e2e de la demo con Playwright a 390 px y 1440 px",
+      "labels": ["tipo:feature", "area:web", "prioridad:media"],
+      "body": "Cubrir: carga del mapa, cambio de escenario, abrir ficha de circuito, pestaña Propuesta. Guardar capturas como artefacto del CI.\n\n**Criterios**\n- [ ] `pnpm test:e2e` corre local y en CI\n- [ ] Falla si hay errores en la consola"
+    },
+    {
+      "key": "M0-04",
+      "milestone": "M0",
+      "title": "Decidir la licencia del proyecto",
+      "labels": ["tipo:research", "area:negocio", "prioridad:media"],
+      "body": "Opciones en `docs/stack.md`: cerrado, AGPL-3.0 o núcleo abierto. Registrar la decisión como ADR 0004 y agregar el archivo `LICENSE`."
+    },
+    {
+      "key": "M1-01",
+      "milestone": "M1",
+      "title": "Crear paquete `@bombillo/ingest` con la interfaz SourceAdapter",
+      "labels": ["tipo:feature", "area:ingesta", "prioridad:alta"],
+      "body": "Ver `docs/estrategias.md` §1. Mover la lógica de lectura de `packages/data/scripts/build-seed.ts` a adaptadores reutilizables.\n\n**Criterios**\n- [ ] Interfaz `discover()` + `parse()`\n- [ ] Tipos de salida validados con Zod\n- [ ] `build-seed.ts` usa los adaptadores"
+    },
+    {
+      "key": "M1-02",
+      "milestone": "M1",
+      "title": "Adaptador Edenorte: descubrir el post semanal y leer el Excel",
+      "labels": ["tipo:feature", "area:ingesta", "prioridad:alta"],
+      "body": "Recorrer la categoría «Programa de mantenimiento de redes», encontrar el adjunto `.xlsx` y parsear la hoja «Publicacion Externa».\n\n**Criterios**\n- [ ] Fixture real en tests (el Excel del 19–23 oct 2026 ya está en `raw/`)\n- [ ] 121 registros en el fixture\n- [ ] Detecta si las hojas regionales no cuadran con la consolidada y lo registra"
+    },
+    {
+      "key": "M1-03",
+      "milestone": "M1",
+      "title": "Adaptador Edesur: scraper HTML con Cheerio",
+      "labels": ["tipo:feature", "area:ingesta", "prioridad:alta"],
+      "body": "Página `/enlaces-empresa/mantenimientos-programados/`. Asignar cada bloque a su día por la estructura HTML (no por orden). Crear circuitos `SIM-` mientras no haya código.\n\n**Criterios**\n- [ ] Fixture HTML guardado\n- [ ] Día de cada bloque correcto\n- [ ] `provenance` oficial en cortes, simulada en circuitos"
+    },
+    {
+      "key": "M1-04",
+      "milestone": "M1",
+      "title": "Adaptador Edeeste: avisos en prensa y noticias de su web",
+      "labels": ["tipo:feature", "area:ingesta", "prioridad:media"],
+      "body": "RSS de 2–3 medios filtrado por «Edeeste», extracción de códigos (`[A-Z]{2,4}\\d{2,4}`), horas y causa. Guardar solo hechos, nunca el texto de la nota. `provenance: press`.\n\n**Criterios**\n- [ ] Extrae códigos y horarios de 3 notas reales de fixture\n- [ ] Marca hora aproximada cuando el medio da un rango"
+    },
+    {
+      "key": "M1-05",
+      "milestone": "M1",
+      "title": "Tabla raw_documents e idempotencia por sha256",
+      "labels": ["tipo:feature", "area:api", "prioridad:alta"],
+      "body": "Guardar el crudo (almacenamiento de objetos) antes de parsear. Si el hash existe, no reprocesar. Comando para reprocesar todo desde el crudo.\n\n**Criterios**\n- [ ] Correr la ingesta dos veces no duplica nada\n- [ ] `pnpm ingest:reprocess` reconstruye cortes desde el crudo"
+    },
+    {
+      "key": "M1-06",
+      "milestone": "M1",
+      "title": "Programar jobs de ingesta (pg-boss o BullMQ)",
+      "labels": ["tipo:feature", "area:ingesta", "prioridad:media"],
+      "body": "Frecuencias en `docs/estrategias.md` §1. Reintentos con backoff exponencial. Empezar con pg-boss para no sumar Redis todavía.\n\n**Criterios**\n- [ ] Worker separado de la API\n- [ ] Alerta si un adaptador devuelve 0 registros en una semana normal"
+    },
+    {
+      "key": "M2-01",
+      "milestone": "M2",
+      "title": "Reemplazar límites provinciales por fuente con licencia válida",
+      "labels": ["tipo:chore", "area:datos", "prioridad:alta"],
+      "body": "El GeoJSON actual no tiene licencia explícita. Usar ONE o geoBoundaries (CC BY 4.0) y agregar la atribución.\n\n**Criterios**\n- [ ] 32 provincias + municipios\n- [ ] Atribución visible en la UI y en `SOURCES.md`"
+    },
+    {
+      "key": "M2-02",
+      "milestone": "M2",
+      "title": "Catálogo de sectores desde OpenStreetMap",
+      "labels": ["tipo:feature", "area:datos", "prioridad:alta"],
+      "body": "Extraer barrios/sectores (place=neighbourhood/suburb) de RD con su municipio. Tabla `sectors` con geometría y `name_norm`.\n\n**Criterios**\n- [ ] Script reproducible\n- [ ] Atribución ODbL"
+    },
+    {
+      "key": "M2-03",
+      "milestone": "M2",
+      "title": "Resolución de nombres de zonas con pg_trgm y tabla de alias",
+      "labels": ["tipo:feature", "area:datos", "prioridad:alta"],
+      "body": "Ver `docs/estrategias.md` §2. Limpieza de prefijos, búsqueda por similitud, umbrales y cola de revisión.\n\n**Criterios**\n- [ ] ≥ 70 % de zonas de Edenorte resueltas automáticamente\n- [ ] Correcciones guardadas como alias"
+    },
+    {
+      "key": "M2-04",
+      "milestone": "M2",
+      "title": "Relación circuito ↔ sector con peso",
+      "labels": ["tipo:feature", "area:datos", "prioridad:media"],
+      "body": "Tabla `circuit_sectors(circuit_code, sector_id, weight)` alimentada por las publicaciones. Sustituye la ubicación aproximada del circuito."
+    },
+    {
+      "key": "M3-01",
+      "milestone": "M3",
+      "title": "Agrupar reportes por celda H3 (resolución 8)",
+      "labels": ["tipo:feature", "area:api", "prioridad:alta"],
+      "body": "Agregar `cell_id` a `citizen_reports` con h3-js. La API pública solo expone celdas, nunca coordenadas.\n\n**Criterios**\n- [ ] Índice por `(cell_id, received_at)`\n- [ ] Test: ninguna respuesta pública contiene lat/lng de reportes"
+    },
+    {
+      "key": "M3-02",
+      "milestone": "M3",
+      "title": "Worker de consenso con decaimiento temporal",
+      "labels": ["tipo:feature", "area:dominio", "prioridad:alta"],
+      "body": "Fórmula y umbrales en `docs/estrategias.md` §3. La función de puntaje vive en `@bombillo/domain` (pura y testeada); el worker solo lee y escribe.\n\n**Criterios**\n- [ ] Tests con casos: ráfaga falsa, corte real, parpadeo"
+    },
+    {
+      "key": "M3-03",
+      "milestone": "M3",
+      "title": "Máquina de estados de circuito y tabla de eventos",
+      "labels": ["tipo:feature", "area:dominio", "prioridad:alta"],
+      "body": "Estados y transiciones en `docs/estrategias.md` §3. Guardar cada transición en `circuit_state_events` para historial y métricas."
+    },
+    {
+      "key": "M3-04",
+      "milestone": "M3",
+      "title": "Reputación de dispositivos",
+      "labels": ["tipo:feature", "area:seguridad", "prioridad:media"],
+      "body": "Sube al coincidir con consenso u oficial, baja al contradecir. Dispositivos nuevos con peso 0.5. Ver §4."
+    },
+    {
+      "key": "M3-05",
+      "milestone": "M3",
+      "title": "Detección de ráfagas coordinadas",
+      "labels": ["tipo:feature", "area:seguridad", "prioridad:media"],
+      "body": "Muchos dispositivos nuevos en la misma celda en poco tiempo ⇒ marcar para revisión en vez de confirmar."
+    },
+    {
+      "key": "M4-01",
+      "milestone": "M4",
+      "title": "Endpoint SSE de cambios de estado",
+      "labels": ["tipo:feature", "area:api", "prioridad:alta"],
+      "body": "`GET /v1/stream?provinceId=` con Server-Sent Events y Redis pub/sub entre instancias."
+    },
+    {
+      "key": "M4-02",
+      "milestone": "M4",
+      "title": "Suscripciones por sector y tokens de push",
+      "labels": ["tipo:feature", "area:api", "prioridad:alta"],
+      "body": "Tablas `devices` y `subscriptions`. Endpoints para registrar token Expo y suscribirse a sectores."
+    },
+    {
+      "key": "M4-03",
+      "milestone": "M4",
+      "title": "Cola de notificaciones con reglas anti-cansancio",
+      "labels": ["tipo:feature", "area:api", "prioridad:media"],
+      "body": "Reglas en `docs/estrategias.md` §5: un aviso al irse y otro al volver, espera de 10 min estable, horario silencioso, aviso de programados a las 19:00."
+    },
+    {
+      "key": "M5-01",
+      "milestone": "M5",
+      "title": "Crear `apps/mobile` con Expo Router",
+      "labels": ["tipo:feature", "area:movil", "prioridad:alta"],
+      "body": "Reutilizar `@bombillo/domain`. Pantallas: mapa, mi sector, reportar, ajustes."
+    },
+    {
+      "key": "M5-02",
+      "milestone": "M5",
+      "title": "Mapa móvil con MapLibre React Native",
+      "labels": ["tipo:feature", "area:movil", "prioridad:alta"],
+      "body": "Mismo estilo y colores que la web (tokens compartidos)."
+    },
+    {
+      "key": "M5-03",
+      "milestone": "M5",
+      "title": "Botón «¿Tienes luz?» con ubicación bajo permiso",
+      "labels": ["tipo:feature", "area:movil", "prioridad:alta"],
+      "body": "Un toque: sí/no. Ubicación solo en ese momento. Mensaje claro de qué se guarda."
+    },
+    {
+      "key": "M5-04",
+      "milestone": "M5",
+      "title": "Último estado conocido sin conexión",
+      "labels": ["tipo:feature", "area:movil", "prioridad:media"],
+      "body": "Guardar el último snapshot con MMKV y mostrar «actualizado hace N min»."
+    },
+    {
+      "key": "M6-01",
+      "milestone": "M6",
+      "title": "Migrar el mapa web a MapLibre + PMTiles",
+      "labels": ["tipo:feature", "area:web", "prioridad:media"],
+      "body": "Mapa base Protomaps en un archivo PMTiles en R2. Mantener d3-geo para la presentación offline. Actualizar ADR 0002."
+    },
+    {
+      "key": "M6-02",
+      "milestone": "M6",
+      "title": "Páginas indexables «¿Hay luz en <provincia>?»",
+      "labels": ["tipo:feature", "area:web", "prioridad:media"],
+      "body": "Rutas SSR por provincia y municipio con estado actual y próximos cortes. Metadatos para compartir en WhatsApp."
+    },
+    {
+      "key": "M6-03",
+      "milestone": "M6",
+      "title": "PWA instalable con Serwist",
+      "labels": ["tipo:feature", "area:web", "prioridad:baja"],
+      "body": "Manifest, icono, caché del último estado."
+    },
+    {
+      "key": "M7-01",
+      "milestone": "M7",
+      "title": "Autenticación y organizaciones con Better Auth",
+      "labels": ["tipo:feature", "area:seguridad", "prioridad:media"],
+      "body": "Solo para empresas e instituciones; el ciudadano sigue anónimo."
+    },
+    {
+      "key": "M7-02",
+      "milestone": "M7",
+      "title": "Panel B2B: sedes, alertas por sede y reporte mensual",
+      "labels": ["tipo:feature", "area:web", "prioridad:media"],
+      "body": "Cargar sedes por dirección, ver estado de todas y descargar horas sin luz por sede."
+    },
+    {
+      "key": "M7-03",
+      "milestone": "M7",
+      "title": "API pública con llaves y límites por plan",
+      "labels": ["tipo:feature", "area:api", "prioridad:baja"],
+      "body": "Llaves por organización, cuotas y documentación OpenAPI."
+    },
+    {
+      "key": "M7-04",
+      "milestone": "M7",
+      "title": "Panel B2G: programado vs. reportado",
+      "labels": ["tipo:feature", "area:web", "prioridad:media"],
+      "body": "Para una distribuidora piloto: cortes no anunciados detectados, duración real vs. anunciada, mapa de calor de reportes."
+    },
+    {
+      "key": "M8-01",
+      "milestone": "M8",
+      "title": "Desplegar API, worker y web",
+      "labels": ["tipo:chore", "area:infra", "prioridad:alta"],
+      "body": "Entornos `staging` y `production`. Despliegue de previsualización por PR para la web."
+    },
+    {
+      "key": "M8-02",
+      "milestone": "M8",
+      "title": "Observabilidad: OpenTelemetry + Sentry/GlitchTip",
+      "labels": ["tipo:chore", "area:infra", "prioridad:media"],
+      "body": "Trazas de API y worker, errores de web y móvil, alertas por fallo de ingesta."
+    },
+    {
+      "key": "M8-03",
+      "milestone": "M8",
+      "title": "Respaldo diario de la base de datos y prueba de restauración",
+      "labels": ["tipo:chore", "area:infra", "prioridad:media"],
+      "body": "Respaldo automático y una restauración probada cada mes."
+    },
+    {
+      "key": "M8-04",
+      "milestone": "M8",
+      "title": "Revisión legal de privacidad (Ley 172-13)",
+      "labels": ["tipo:research", "area:seguridad", "prioridad:media"],
+      "body": "Política de privacidad, retención de 90 días, consentimiento de ubicación."
+    },
+    {
+      "key": "MV-01",
+      "milestone": "MV",
+      "title": "20 entrevistas con negocios multisede",
+      "labels": ["tipo:research", "area:negocio", "prioridad:alta"],
+      "body": "Validar dolor, disposición a pagar y precio (hipótesis RD$1,500/sede/mes). Guía de entrevista en `docs/negocio.md`."
+    },
+    {
+      "key": "MV-02",
+      "milestone": "MV",
+      "title": "Consulta institucional sobre datos estructurados de interrupciones",
+      "labels": ["tipo:research", "area:negocio", "prioridad:alta"],
+      "body": "Preguntar (vía OGTIC) si las EDE o el CUED tienen la programación en formato estructurado y si se puede publicar como dato abierto."
+    },
+    {
+      "key": "MV-03",
+      "milestone": "MV",
+      "title": "Piloto en una provincia y tablero de métricas",
+      "labels": ["tipo:research", "area:negocio", "prioridad:media"],
+      "body": "Métricas de `docs/estrategias.md` §8. Meta: 5,000 usuarios en la provincia piloto."
+    },
+    {
+      "key": "MV-04",
+      "milestone": "MV",
+      "title": "Plan financiero de 12 meses",
+      "labels": ["tipo:research", "area:negocio", "prioridad:media"],
+      "body": "Reemplazar el estimado de US$60,000–90,000 por un presupuesto con equipo, infraestructura y adquisición."
+    }
+  ]
+}
