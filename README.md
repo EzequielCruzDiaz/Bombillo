@@ -1,4 +1,4 @@
-# Bombillo
+# ¿Llegó?
 
 **La luz en República Dominicana, en vivo.** Mapa web y móvil que une los cortes programados de Edenorte, Edesur y Edeeste con reportes ciudadanos validados por consenso. Cada dato indica su procedencia: **oficial**, **prensa** o **simulado**.
 
