@@ -1,3 +1,22 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "maplibre-gl/dist/maplibre-gl.css";
+@source ".";
+
+@theme inline {
+  --color-night: var(--night);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-lamp: var(--lamp);
+  --color-planned: var(--st-planned);
+  --color-fault: var(--st-fault);
+  --color-restoring: var(--st-restoring);
+}
+
 /*
  * Bombillo · "de noche"
  * Layout: mapa a pantalla completa con la línea de tiempo debajo; en el celular
@@ -1105,4 +1124,44 @@ a {
   .tagline {
     font-size: 13px;
   }
+}
+
+.map-gl-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.map-mode {
+  position: absolute;
+  z-index: 2;
+  right: var(--gutter-r);
+  bottom: 118px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgb(18 24 35 / 0.9);
+  font-size: 13px;
+}
+
+.maplibregl-ctrl-group {
+  background: rgb(18 24 35 / 0.9);
+  border: 1px solid var(--line);
+}
+
+.maplibregl-ctrl-group button + button {
+  border-top-color: var(--line);
+}
+
+.maplibregl-ctrl button .maplibregl-ctrl-icon {
+  filter: invert(1);
+}
+
+.maplibregl-ctrl-attrib {
+  background: rgb(11 15 21 / 0.7);
+  color: var(--muted);
+}
+
+.maplibregl-ctrl-attrib a {
+  color: var(--muted);
 }

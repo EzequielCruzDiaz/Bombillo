@@ -4,3 +4,4 @@ pnpm-lock.yaml
 **/dist/**
 **/.next/**
 docs/roadmap.md
+**/public/maplibre/**

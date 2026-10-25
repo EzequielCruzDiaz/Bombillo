@@ -21,7 +21,8 @@
     "check": "pnpm lint && pnpm typecheck && pnpm test",
     "prepare": "husky",
     "roadmap:docs": "tsx scripts/github/bootstrap.ts --docs-only",
-    "github:bootstrap": "tsx scripts/github/bootstrap.ts"
+    "github:bootstrap": "tsx scripts/github/bootstrap.ts",
+    "postinstall": "node scripts/copy-maplibre-worker.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

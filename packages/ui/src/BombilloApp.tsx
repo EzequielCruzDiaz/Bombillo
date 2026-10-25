@@ -10,6 +10,7 @@ import {
   type Timeline as TimelineData,
 } from "@bombillo/domain";
 import type { DataSource, ProvinceGeo } from "./data-source";
+import { MapGL } from "./components/MapGL";
 import { MapView } from "./components/MapView";
 import { Timeline } from "./components/Timeline";
 import {
@@ -21,6 +22,15 @@ import {
   ScenarioInfo,
 } from "./components/Panels";
 import { Pitch } from "./components/Pitch";
+
+function canUseGL(): boolean {
+  if (window.location.protocol === "file:") return false;
+  try {
+    return !!document.createElement("canvas").getContext("webgl2");
+  } catch {
+    return false;
+  }
+}
 
 type Tab = "avisos" | "detalle" | "escenario" | "propuesta";
 
@@ -59,6 +69,14 @@ export function BombilloApp({ source, showPitch = false, brand }: Props) {
   const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
   const [selectedCircuit, setSelectedCircuit] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [mapMode, setMapMode] = useState<"3d" | "plano">("plano");
+  const [glOk, setGlOk] = useState(false);
+  useEffect(() => {
+    if (canUseGL()) {
+      setGlOk(true);
+      setMapMode("3d");
+    }
+  }, []);
 
   useEffect(() => {
     Promise.all([source.getDataset(), source.getGeo()])
@@ -186,15 +204,37 @@ export function BombilloApp({ source, showPitch = false, brand }: Props) {
       <main className="stage">
         <div className="map-wrap">
           <Kpis snapshot={snapshot} />
-          <MapView
-            geo={geo}
-            circuits={dataset.circuits}
-            snapshot={snapshot}
-            selectedProvince={province?.id ?? null}
-            selectedCircuit={selectedCircuit}
-            onSelectProvince={selectProvince}
-            onSelectCircuit={selectCircuit}
-          />
+          {mapMode === "3d" && glOk ? (
+            <MapGL
+              geo={geo}
+              circuits={dataset.circuits}
+              snapshot={snapshot}
+              selectedProvince={province?.id ?? null}
+              selectedCircuit={selectedCircuit}
+              onSelectProvince={selectProvince}
+              onSelectCircuit={selectCircuit}
+              onFail={() => setGlOk(false)}
+            />
+          ) : (
+            <MapView
+              geo={geo}
+              circuits={dataset.circuits}
+              snapshot={snapshot}
+              selectedProvince={province?.id ?? null}
+              selectedCircuit={selectedCircuit}
+              onSelectProvince={selectProvince}
+              onSelectCircuit={selectCircuit}
+            />
+          )}
+          {glOk && (
+            <button
+              type="button"
+              className="map-mode"
+              onClick={() => setMapMode((m) => (m === "3d" ? "plano" : "3d"))}
+            >
+              {mapMode === "3d" ? "Mapa plano" : "Mapa 3D"}
+            </button>
+          )}
           <div className={`legend-wrap${legendOpen ? " is-open" : ""}`}>
             <button
               type="button"

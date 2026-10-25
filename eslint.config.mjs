@@ -10,6 +10,7 @@ export default tseslint.config(
       "**/dist/**",
       "**/.next/**",
       "**/generated/**",
+      "**/public/maplibre/**",
       "**/next-env.d.ts",
       "**/coverage/**",
     ],
